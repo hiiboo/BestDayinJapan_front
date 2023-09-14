@@ -1,1 +1,0 @@
-# BestDayinJapan_front
