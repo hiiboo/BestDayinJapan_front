@@ -1,7 +1,9 @@
-// src/components/TouristPage.js
+// src/components/GuestPage.js
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-function TouristPage() {
+function GuestPage() {
+  const navigate = useNavigate();
   const [meetingLocation, setMeetingLocation] = useState('');
   const [destination, setDestination] = useState('');
   const [startTime, setStartTime] = useState('');
@@ -10,6 +12,10 @@ function TouristPage() {
   const [hourlyRate, setHourlyRate] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('');
   const [requestText, setRequestText] = useState('');
+  const handleRequestClick = () => {
+    // ここで会員登録画面に遷移する
+  navigate('/guest/register');
+  };
 
   return (
     <div>
@@ -78,9 +84,9 @@ function TouristPage() {
         />
       </div>
       
-      <button>情報を保存</button>
+      <button onClick={handleRequestClick}>Request</button>
     </div>
   );
 }
 
-export default TouristPage;
+export default GuestPage;

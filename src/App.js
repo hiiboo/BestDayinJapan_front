@@ -3,8 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home'; // ホームページコンポーネント
-import TouristPage from './components/TouristPage'; // Touristページコンポーネント
+import GuestPage from './components/GuestPage'; // ゲストページコンポーネント
 import GuidePage from './components/GuidePage'; // ガイドページコンポーネント
+import GuestRegister from './components/GuestRegister'; 
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <div className="App">
         <img src="/logo.png" alt="Logo" className="logo" />
         <h1>
-          <Link to="/tourist">Tourist</Link>
+          <Link to="/guest">Guest</Link>
         </h1>
         <h2>
           <Link to="/guide">現地人ガイド </Link>
@@ -20,7 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/guide" element={<GuidePage />} />
-          <Route path="/tourist" element={<TouristPage />} />
+          <Route path="/guest" element={<GuestPage />} />
+          <Route path="/guest/register" element={<GuestRegister />} />
         </Routes>
       </div>
     </Router>
