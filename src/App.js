@@ -6,14 +6,13 @@ import Home from './components/Home'; // ホームページコンポーネント
 import TouristPage from './components/TouristPage'; // Touristページコンポーネント
 import GuidePage from './components/GuidePage'; // ガイドページコンポーネント
 
-
 function App() {
   return (
     <Router>
       <div className="App">
         <img src="/logo.png" alt="Logo" className="logo" />
         <h1>
-          <Link to="/">Tourist</Link>
+          <Link to="/tourist">Tourist</Link>
         </h1>
         <h2>
           <Link to="/guide">現地人ガイド</Link>
