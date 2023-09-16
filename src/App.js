@@ -15,7 +15,7 @@ function App() {
           <Link to="/tourist">Tourist</Link>
         </h1>
         <h2>
-          <Link to="/guide">現地人ガイド</Link>
+          <Link to="/guide">現地人ガイド </Link>
         </h2>
         <Routes>
           <Route path="/" element={<Home />} />
